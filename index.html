@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <h1>Ultra Rare Trading card API</h1>
+    <label>
+      Name search:
+      <!-- Choose between select or [type=text] -->
+      <!-- <input type="text" name="card-types" /> -->
+      <select name="card-types">
+        <option value="Magician">Magician</option>
+        <option value="Warrior">Warrior</option>
+        <option value="Dragon">Dragon</option>
+      </select>
+    </label>
+
+<button class="js-get-cards">GET CARDS</button>
+<div class="js-container"></div>
+<script src="./JS/script.js"></script>
+</body>
+</html>
