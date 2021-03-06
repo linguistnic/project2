@@ -1,10 +1,9 @@
-//API URL:
+// jQuery version
 
 function getApiUrl(cardType) {
     return `https://db.ygoprodeck.com/api/v7/cardinfo.php?level=10&fname=${cardType}`;
   }
   
-//Card HTML:
   function getCardHtml(card) {
     return `
       <div class="card-container">
@@ -13,33 +12,26 @@ function getApiUrl(cardType) {
       </div>  
     `;
   }
-
-//Actually displaying cards within the array:
+  
   function insertCards(cards) {
     const cardsHtml = cards.data.map(getCardHtml).join("");
   
-    document.querySelector(".js-container").innerHTML = cardsHtml;
+    $(".js-container").html(cardsHtml);
   }
-
-//Failsafe just in case:
+  
   function errorHandler() {
-    document.querySelector(".js-container").innerHTML = `
+    $(".js-container").html(`
       <div class="error">
         The requested cards were not found.
       </div>
-    `;
+    `);
   }
-//Pathway:
+  
   function downloadCards() {
-    const cardType = document.querySelector("[name=card-types]").value;
+    const cardType = $("[name=card-types]").val();
     const api_url = getApiUrl(cardType);
-    fetch(api_url)
-      .then((data) => data.json())
-      .then(insertCards)
-      .catch(errorHandler);
+    $.get(api_url).done(insertCards).fail(errorHandler);
   }
-//Event:
-  document
-    .querySelector(".js-get-cards")
-    .addEventListener("click", downloadCards);
-
+  
+  $(".js-get-cards").click(downloadCards);
+  
