@@ -1,0 +1,13 @@
+.card-container {
+    width: 300px;
+    background-color: lightgray;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .card-image {
+    width: 240px;
+  }
+  
