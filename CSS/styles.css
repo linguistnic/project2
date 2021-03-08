@@ -1,3 +1,9 @@
+.big-container{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
 .card-container {
     width: 300px;
     background-color: lightgray;
@@ -6,8 +12,16 @@
     margin: 20px;
     text-align: center;
   }
-  
   .card-image {
-    width: 240px;
+    width: 100px;
   }
-  
+  .card-description{
+    font-size: 1.5em;
+  }
+  .img-cont{
+    display: flex;
+    background-color: gold;
+  }
+ .mp{
+
+ }

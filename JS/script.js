@@ -1,5 +1,9 @@
 //API URL:
-
+/*filter:
+.php?level=${cardLevel}&fname=${cardType}
+`data` is automatic in JS! It's not a parameter you must use.
+you must use a question mark ? (that's why it's called a query string)
+*/
 function getApiUrl(cardType) {
     return `https://db.ygoprodeck.com/api/v7/cardinfo.php?level=10&fname=${cardType}`;
   }
@@ -38,7 +42,7 @@ function getApiUrl(cardType) {
       .then(insertCards)
       .catch(errorHandler);
   }
-//Event:
+//Event (thiss):
   document
     .querySelector(".js-get-cards")
     .addEventListener("click", downloadCards);

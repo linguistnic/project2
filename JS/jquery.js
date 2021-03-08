@@ -1,5 +1,8 @@
 // jQuery version
 
+/* the $(``) is shorthand for document.querySelector/All(.yourSelectionHere) it intelligently selects whatever you need
+*/
+
 function getApiUrl(cardType) {
     return `https://db.ygoprodeck.com/api/v7/cardinfo.php?level=10&fname=${cardType}`;
   }
