@@ -155,8 +155,6 @@ background-color: rgb(161, 161, 161);
 
   .flex-card{
     display: inline-grid;
-    justify-content: center;
-    padding-left:7%;
     padding-top: 15px;
   }
 
