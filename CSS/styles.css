@@ -145,7 +145,7 @@ input[type=text]{
   }
   .img-cont{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(53, 38, 1);
   }
   
@@ -162,6 +162,7 @@ background-color: rgb(161, 161, 161);
 
  .mp{
 justify-content: center;
+width:15%;
  }
  
  h2{
@@ -176,4 +177,9 @@ justify-content: center;
    justify-content: center;
    font-family: lato;
    font-size:1.5em;
+ }
+
+ .torch-img{
+   width: 15%;
+   height: auto;
  }
