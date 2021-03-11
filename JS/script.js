@@ -34,7 +34,7 @@ function getApiUrl(cardType) {
   function errorHandler() {
     document.querySelector(".js-container").innerHTML = `
       <div class="error">
-        The requested cards were not found.
+      Yugi's grandpa doesn't have that card. Maybe you meant something else?
       </div>
     `;
   }
@@ -47,7 +47,7 @@ function getApiUrl(cardType) {
       .then(insertCards)
       .catch(errorHandler);
   }
-//Event (thiss):
+//Event:
   document
     .querySelector(".js-get-cards")
     .addEventListener("click", downloadCards);
