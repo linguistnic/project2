@@ -120,7 +120,6 @@ input[type=text]{
 .page-title{
   display: flex;
   flex-flow:column wrap;
-  justify-content: center;
   text-align: center;
   font-family: DotGothic16;
   background-color: #d3ad54;
