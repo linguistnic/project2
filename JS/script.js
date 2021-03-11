@@ -5,16 +5,21 @@
 you must use a question mark ? (that's why it's called a query string)
 */
 function getApiUrl(cardType) {
-    return `https://db.ygoprodeck.com/api/v7/cardinfo.php?level=10&fname=${cardType}`;
+    return `https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=${cardType}`;
   }
   
 //Card HTML:
   function getCardHtml(card) {
     return `
+    <div class="flex-card">
       <div class="card-container">
         <h2>${card.name}</h2>
         <img class="card-image" src="${card.card_images[0].image_url}" alt="${card.name}" />
+        <p class="card-desc">${card.desc}</p>
+        <p class="card-atk">ATK: ${card.atk}</p>
+        <p class="card-def">DEF: ${card.def}</p>
       </div>  
+    </div>
     `;
   }
 

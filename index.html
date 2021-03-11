@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu-Gi-Oh! Card Search</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="img-cont">
-  <img src="./assets/mp.jpg" alt="millennium puzzle" class="mp">
+  <img src="./assets/MillenniumPuzzle.png" alt="millennium puzzle" class="mp">
   </div>
-
-    <h1>Yu-Gi-Oh! Card Search</h1>
-    <label>
-      Name search:
+    <div class="page-title">
+    <h1>YU-GI-OH! CARD SEARCH</h1>
+    </div>
+    <div class="search-container">
+    <label class="search-bar">
+      SEARCH BY NAME:
       <!-- Choose between select or [type=text] -->
-      <input type="text" name="card-types" />
+      <input type="text" name="card-types" placeholder="dragunity"/>
       <!-- <select name="card-types">
         <option value="Magician">Magician</option>
         <option value="Warrior">Warrior</option>
         <option value="Dragon">Dragon</option>
       </select> -->
     </label>
+  </div>
 
-<button class="js-get-cards">GET CARDS</button>
+  <div class="button-spacer">
+    <div class="button-container-2">
+      <span class="mas">DUEL!</span>
+    <button type="button" name="Hover" class="js-get-cards">DUEL!</button>
+  </div>
+</div>
 <div class="js-container"></div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./JS/script.js"></script>
