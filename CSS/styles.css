@@ -120,6 +120,7 @@ input[type=text]{
 .page-title{
   display: flex;
   justify-content: center;
+  text-align: center;
   font-family: DotGothic16;
   background-color: #d3ad54;
   font-size: 1.25em;
