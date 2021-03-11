@@ -156,6 +156,7 @@ background-color: rgb(161, 161, 161);
   .flex-card{
     display: inline-grid;
     padding-top: 15px;
+    padding-left: 2%;
   }
 
  .mp{
