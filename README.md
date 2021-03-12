@@ -6,7 +6,7 @@ In this project you'll find a Yu-Gi-Oh! name search, which was written using HTM
 
 In the future, I would have liked to spend time changing some things:
 
-1) Removing the attack and defense values of trap and spell cards.
+1) Creating an option to display only one kind of monster.
 
 2) Creating a more responsive design and incorporating a lot more grid elements.
 
