@@ -10,28 +10,43 @@ function getApiUrl(cardType) {
   
 //Card HTML:
   function getCardHtml(card) {
+/*
+    var attackDefense;
+    if (typeof card.atk === 'undefined' || typeof card.def === 'undefined') {
+      attackDefense = '';
+    } else {
+      attackDefense = `
+      <p class="card-atk">ATK: ${card.atk}</p>
+      <p class="card-def">DEF: ${card.def}</p>   
+    `;
+    }
+*/
+    const attackDefense = typeof card.atk === 'undefined' || typeof card.def === 'undefined' ? '' : `
+      <p class="card-atk">ATK: ${card.atk}</p>
+      <p class="card-def">DEF: ${card.def}</p>   
+    `;
+
     return `
     <div class="flex-card">
       <div class="card-container">
         <h2>${card.name}</h2>
         <img class="card-image" src="${card.card_images[0].image_url}" alt="${card.name}" />
         <p class="card-desc">${card.desc}</p>
-        <p class="card-atk">ATK: ${card.atk}</p>
-        <p class="card-def">DEF: ${card.def}</p>
+        ${attackDefense}
       </div>  
     </div>
     `;
   }
 
 //Actually displaying cards within the array:
-  function insertCards(cards) {
+function insertCards(cards) {
     const cardsHtml = cards.data.map(getCardHtml).join("");
   
     document.querySelector(".js-container").innerHTML = cardsHtml;
   }
 
 //Failsafe just in case:
-  function errorHandler() {
+function errorHandler() {
     document.querySelector(".js-container").innerHTML = `
       <div class="error">
       Yugi's grandpa doesn't have that card. Maybe you meant something else?
